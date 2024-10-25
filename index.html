@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy文轩的技术博客</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Jeremy文轩的技术博客</h1>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#articles">技术文章</a></li>
+                <li><a href="#diary">日记</a></li>
+                <li><a href="#notes">随笔</a></li>
+                <li><a href="#about">关于我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div id="carousel">
+                <!-- 技术相关图片将由JavaScript动态加载 -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>关于我</h2>
+            <p>作为一名专注于前沿技术的开发者和研究者，我致力于探索人工智能、区块链、云计算等领域的最新进展。通过这个博客，我希望能与大家分享我的技术见解、项目经验和学习心得。</p>
+        </section>
+
+        <section id="articles">
+            <h2>技术文章</h2>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="搜索技术文章...">
+            </div>
+            <ul id="article-list"></ul>
+        </section>
+
+        <section id="diary">
+            <h2>日记</h2>
+            <div id="diary-search-container">
+                <input type="text" id="diary-search-input" placeholder="搜索日记...">
+            </div>
+            <ul id="diary-list"></ul>
+        </section>
+
+        <section id="notes">
+            <h2>随笔</h2>
+            <div id="notes-search-container">
+                <input type="text" id="notes-search-input" placeholder="搜索随笔...">
+            </div>
+            <ul id="notes-list"></ul>
+        </section>
+
+        <section id="content"></section>
+    </main>
+
+    <script src="libs/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
