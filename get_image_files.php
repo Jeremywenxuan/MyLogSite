@@ -1,5 +1,5 @@
 <?php
-$imageDir = 'images/';
+$imageDir = 'images/';  // 改为相对路径
 $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
 $images = array_filter(scandir($imageDir), function($file) use ($allowedExtensions) {
