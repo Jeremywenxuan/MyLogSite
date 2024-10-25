@@ -20,13 +20,25 @@
             </ul>
         </nav>
     </header>
+    <div class="container"></div>
+        <div id="home" class="page">
+            <h2>欢迎来到Jeremy文轩的个人网站</h2>
+            <p>这里是首页内容...</p>
+            
+            <!-- 轮播图部分保不变 -->
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="./images/image1.jpg" alt="个人照片1">
+                </div>
+                <div class="mySlides">
+                    <img src="./images/image2.jpg" alt="个人照片2">
+                </div
 
-    <main>
-        <section id="home">
-            <div id="carousel">
-                <!-- 技术相关图片将由JavaScript动态加载 -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </section>
+        </div>
+    <main>
 
         <section id="about">
             <h2>关于我</h2>
@@ -62,5 +74,30 @@
 
     <script src="libs/marked.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        // 轮播图相关代码保持不变
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+
+        // 自动播放轮播图
+        setInterval(() => {
+            plusSlides(1);
+        }, 3000); // 每3秒切换一次图片
+    </script>
 </body>
 </html>
